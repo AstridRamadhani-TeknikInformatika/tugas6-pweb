@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import Books from '../views/Books.vue'
 import Categories from '../views/Categories.vue';
 import Member from "@/views/Member.vue";
+import Peminjaman from "@/views/Peminjaman.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -25,6 +26,11 @@ const router = createRouter({
       path: '/member',
       name: 'Member',
       component: Member,
+    },
+    {
+      path: '/peminjaman',
+      name: 'Peminjaman',
+      component: Peminjaman,
     },
     {
       path: '/about',

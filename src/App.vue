@@ -16,6 +16,9 @@
           <li class="nav-item">
             <router-link to="/Member" class="nav-link">Anggota</router-link>
           </li>
+          <li class="nav-item">
+            <router-link to="/Peminjaman" class="nav-link">Peminjaman</router-link>
+          </li>
         </ul>
       </div>
     </nav>
@@ -34,12 +37,5 @@ export default {
 <style>
 #app {
   font-family: Arial, Helvetica, sans-serif;
-}
-.navbar-brand{
-  border: 1px solid #ffffff;
-  padding: 5px 10px;
-  border-radius: 20px;
-  text-decoration: none;
-  color: white;
 }
 </style>
