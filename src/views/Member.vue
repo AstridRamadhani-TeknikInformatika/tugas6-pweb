@@ -101,7 +101,7 @@ export default {
   methods: {
       search() {
         const number = this.searchNumber;
-        axios.get(`http://localhost/crud/selectnomoranggota.php?nomor=${number}`)
+        axios.get(`https://crud--astridramadhani.repl.co/selectnomoranggota.php=${number}`)
             .then(response => {
               this.searchedMember = response.data;
             })
@@ -112,7 +112,7 @@ export default {
       },
     // Ambil seluruh anggota dari backend API
     getAnggotaList() {
-      axios.get('http://localhost/crud/selectanggota.php')
+      axios.get('https://crud--astridramadhani.repl.co/selectanggota.php')
           .then(response => {
             this.anggotaList = response.data;
           })
@@ -135,7 +135,7 @@ export default {
     // Menambah atau mengedit anggota
     submitForm() {
       if (this.mode === 'tambah') {
-        axios.post('http://localhost/crud/insertanggota.php', this.anggota)
+        axios.post('https://crud--astridramadhani.repl.co/insertanggota.php', this.anggota)
             .then(response => {
               console.log(response.data);
               // Reset form dan ambil seluruh anggota setelah sukses menambahkan anggota
@@ -146,7 +146,7 @@ export default {
               console.log(error);
             });
       } else {
-        axios.put('http://localhost/crud/updateanggota.php' + this.anggota.nomor, this.anggota)
+        axios.put('https://crud--astridramadhani.repl.co/updateanggota.php' + this.anggota.nomor, this.anggota)
             .then(response => {
               console.log(response.data);
               // Reset form dan ambil seluruh anggota setelah sukses mengedit anggota
@@ -160,7 +160,7 @@ export default {
     },
     // Menghapus anggota berdasarkan nomor
     hapusAnggota(nomor) {
-      axios.delete('http://localhost/crud/delateanggota.php' + nomor)
+      axios.delete('https://crud--astridramadhani.repl.co/delateanggota.php' + nomor)
           .then(response => {
             console.log(response.data);
             // Ambil seluruh anggota setelah sukses menghapus anggota

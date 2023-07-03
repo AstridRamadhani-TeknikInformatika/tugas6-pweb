@@ -45,7 +45,7 @@ export default {
   },
   methods: {
     fetchBooks() {
-      axios.get('http://localhost/crud/selectbuku.php')
+      axios.get('https://crud--astridramadhani.repl.co/selectbuku.php')
           .then(response => {
             this.books = response.data;
           })
@@ -55,7 +55,7 @@ export default {
     },
     deleteBook(kode) {
       if (confirm('Are you sure you want to delete this book?')) {
-        axios.delete(`http://localhost/crud/delatebuku.php?kode=${kode}`)
+        axios.delete(`https://crud--astridramadhani.repl.co/delatebuku.php=${kode}`)
             // eslint-disable-next-line no-unused-vars
             .then(response => {
               this.fetchBooks();

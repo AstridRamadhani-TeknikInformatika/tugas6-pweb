@@ -121,7 +121,7 @@ export default {
 
   methods: {
     submitPeminjaman() {
-      fetch('http://localhost/crud/peminjamanbuku.php', {
+      fetch('https://crud--astridramadhani.repl.co/peminjamanbuku.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -139,7 +139,7 @@ export default {
           });
     },
     submitPengembalian() {
-      fetch('http://localhost/crud/pengembalianbuku.php', {
+      fetch('https://crud--astridramadhani.repl.co/pengembalianbuku.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -158,7 +158,7 @@ export default {
     },
     selectPeminjaman() {
       try {
-        const response = fetch('http://localhost/crud/selectpeminjaman.php?nomor=${this.selectedNumber}');
+        const response = fetch('https://crud--astridramadhani.repl.co/selectpeminjaman.php?nomor=${this.selectedNumber}');
         if (response.ok) {
           const data = response.json();
           console.log(data);
@@ -171,7 +171,7 @@ export default {
     },
     fetchPeminjamanDipinjam() {
       // Panggil API backend PHP untuk mendapatkan data peminjaman dengan status DIPINJAM
-      axios.get('http://localhost/crud/statusdipinjam.php')
+      axios.get('https://crud--astridramadhani.repl.co/statusdipinjam.php')
           .then((response) => {
             this.peminjamanDipinjam = response.data;
           })
@@ -181,7 +181,7 @@ export default {
     },
     fetchPeminjamanDikembalikan() {
       // Panggil API backend PHP untuk mendapatkan data peminjaman dengan status DIKEMBALIKAN
-      axios.get( 'http://localhost/crud/statusdikembalikan.php')
+      axios.get( 'https://crud--astridramadhani.repl.co/statusdikembalikan.php')
           .then((response) => {
             this.peminjamanDikembalikan = response.data;
           })
